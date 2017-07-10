@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Intro') {
+    stage('Build') {
       steps {
         echo 'This is the Introduction of Blue Ocean Pipeline Editor'
-        tool(name: 'maven', type: '/bin/mvn clean package')
+        sh 'mvn \'clean package\''
       }
     }
     stage('PastBuild') {
