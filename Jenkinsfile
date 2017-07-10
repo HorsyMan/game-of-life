@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'This is the Introduction of Blue Ocean Pipeline Editor'
-        sh '${tool \'maven\'}/bin/mvn clean package'
+        sh '''echo PATH = 
+${PATH};echo M2_HOME=${M2_HOME};mvn clean package'''
       }
     }
     stage('PastBuild') {
