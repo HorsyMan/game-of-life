@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        tool(name: 'maven', type: '/bin/mvn clean package')
+        tool(name: 'maven', type: 'mvn \'clean package\'')
       }
     }
     stage('PastBuild') {
